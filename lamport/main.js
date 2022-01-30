@@ -1,10 +1,4 @@
-// function play() {
-//     animation.restart();
-// };
-
-var clock1 = 0;
-var clock2 = 0;
-var clock3 = 0;
+var [clock1, clock2, clock3] = [0, 0, 0];
 
 var intervalId = setInterval(function() {
     $('#clock1').text(clock1);
