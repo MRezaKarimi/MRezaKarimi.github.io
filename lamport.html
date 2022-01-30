@@ -17,7 +17,8 @@
     <div class="container py-3">
         <header>
             <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
-                <span class="fs-4">Lamport Logical Clock</span>
+                <span class="fs-4" style="margin-right: auto;">Lamport Logical Clock</span>
+                <a class="fs-5" style="text-decoration: none;" href="https://www.linkedin.com/in/mohammad-r-karimi-73a4ba152/">Mohammad Reza Karimi</a>
             </div>
 
             <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
@@ -38,13 +39,16 @@
                             <button type="button" class="w-100 btn btn-primary" onclick="sendMessage(1,2);">Send message to P #2 <i class="fa fa-arrow-right"></i></button>
                         </div>
                     </div>
-                    <div class="alert alert-success fade in hide" role="alert" id="alert-1">
+                    <div class="alert alert-success fade in hide" role="alert" id="receive-1">
                         <p>Message received!</p>
-                        <pr> Syncing clock... </pr>
+                    </div>
+                    <div class="alert alert-primary fade in hide" role="alert" id="sync-1">
+                        <pr>Syncing clock... </pr>
                     </div>
                 </div>
                 <div class="message-container">
-                    <div class="message"><i class="fa fa-envelope fa-regular"></i></div>
+                    <div class="message ltr-message proc-1-ltr"><i class="fa fa-envelope fa-regular"></i></div>
+                    <div class="message rtl-message proc-2-rtl"><i class="fa fa-envelope fa-regular"></i></div>
                 </div>
                 <div class="col">
                     <div class="card mb-4 rounded-3 shadow-sm border-primary">
@@ -59,13 +63,16 @@
                             <button type="button" class="w-100 btn btn-primary row-cols-md-6" onclick="sendMessage(2,3);">Send message to P #3 <i class="fa fa-arrow-right"></i></button>
                         </div>
                     </div>
-                    <div class="alert alert-success fade in hide" role="alert" id="alert-2">
+                    <div class="alert alert-success fade in hide" role="alert" id="receive-2">
                         <p>Message received!</p>
-                        <pr> Syncing clock... </pr>
+                    </div>
+                    <div class="alert alert-primary fade in hide" role="alert" id="sync-2">
+                        <pr>Syncing clock... </pr>
                     </div>
                 </div>
                 <div class="message-container">
-                    <div class="message"><i class="fa fa-envelope fa-regular"></i></div>
+                    <div class="message ltr-message proc-2-ltr"><i class="fa fa-envelope fa-regular"></i></div>
+                    <div class="message rtl-message proc-3-rtl"><i class="fa fa-envelope fa-regular"></i></div>
                 </div>
                 <div class="col">
                     <div class="card mb-4 rounded-3 shadow-sm border-primary">
@@ -79,9 +86,11 @@
                             <button type="button" class="w-100 btn btn-primary" onclick="sendMessage(3,2);"><i class="fa fa-arrow-left"></i> Send message to P #2</button>
                         </div>
                     </div>
-                    <div class="alert alert-success fade in hide" role="alert" id="alert-3">
+                    <div class="alert alert-success fade in hide" role="alert" id="receive-3">
                         <p>Message received!</p>
-                        <pr> Syncing clock... </pr>
+                    </div>
+                    <div class="alert alert-primary fade in hide" role="alert" id="sync-3">
+                        <pr>Syncing clock... </pr>
                     </div>
                 </div>
             </div>

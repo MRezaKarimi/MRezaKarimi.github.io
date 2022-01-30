@@ -2,13 +2,19 @@
     margin-bottom: 20;
     width: 30px;
     height: 30px;
-    /* background-color: green; */
     border-radius: 20;
-    left: 0px;
     top: 20%;
     position: relative;
     font-size: 1.8rem;
-    color: orange;
+    color: white;
+}
+
+.ltr-message {
+    left: 0px;
+}
+
+.rtl-message {
+    left: 150px;
 }
 
 .message-container {
