@@ -1,0 +1,95 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="./lib/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./lib/font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <script src="./lib/anime.min.js"></script>
+    <title>Lamport Logical Clock</title>
+</head>
+
+<body>
+    <div class="container py-3">
+        <header>
+            <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+                <span class="fs-4">Lamport Logical Clock</span>
+            </div>
+
+            <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+                <p class="fs-5 text-muted">Quickly build an effective pricing table for your potential customers with this Bootstrap example. It’s built with default Bootstrap components and utilities with little customization.</p>
+            </div>
+        </header>
+
+        <main>
+            <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow-sm border-primary">
+                        <div class="card-header py-3 text-white bg-primary border-primary">
+                            <h4 class="my-0 fw-normal">Process #1</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title" id="clock1">0</small>
+                            </h1>
+                            <button type="button" class="w-100 btn btn-primary" onclick="sendMessage(1,2);">Send message to P #2 <i class="fa fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="alert alert-success fade in hide" role="alert" id="alert-1">
+                        <p>Message received!</p>
+                        <pr> Syncing clock... </pr>
+                    </div>
+                </div>
+                <div class="message-container">
+                    <div class="message"><i class="fa fa-envelope fa-regular"></i></div>
+                </div>
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow-sm border-primary">
+                        <div class="card-header py-3 text-white bg-primary border-primary">
+                            <h4 class="my-0 fw-normal">Process #2</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title" id="clock2">0</small>
+                            </h1>
+                            <button type="button" class="w-100 btn btn-primary row-cols-md-6" onclick="sendMessage(2,1);"><i class="fa fa-arrow-left"></i> Send message to P #1</button>
+                            <p></p>
+                            <button type="button" class="w-100 btn btn-primary row-cols-md-6" onclick="sendMessage(2,3);">Send message to P #3 <i class="fa fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="alert alert-success fade in hide" role="alert" id="alert-2">
+                        <p>Message received!</p>
+                        <pr> Syncing clock... </pr>
+                    </div>
+                </div>
+                <div class="message-container">
+                    <div class="message"><i class="fa fa-envelope fa-regular"></i></div>
+                </div>
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow-sm border-primary">
+                        <div class="card-header py-3 text-white bg-primary border-primary">
+                            <h4 class="my-0 fw-normal">Process #3</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title" id="clock3">0</small>
+                            </h1>
+
+                            <button type="button" class="w-100 btn btn-primary" onclick="sendMessage(3,2);"><i class="fa fa-arrow-left"></i> Send message to P #2</button>
+                        </div>
+                    </div>
+                    <div class="alert alert-success fade in hide" role="alert" id="alert-3">
+                        <p>Message received!</p>
+                        <pr> Syncing clock... </pr>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <script src="./lib/jquery.min.js"></script>
+    <script src="./lib/bootstrap.bundle.min.js"></script>
+    <script src="helpers.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
