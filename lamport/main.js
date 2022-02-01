@@ -7,13 +7,13 @@ var p1speed = 1;
 var p2speed = 2;
 var p3speed = 3;
 
-if (params.p1speed != null) {
+if (params.p1speed != null && params.p1speed != '') {
     p1speed = params.p1speed * 1;
 }
-if (params.p2speed != null) {
+if (params.p2speed != null && params.p2speed != '') {
     p2speed = params.p2speed * 1;
 }
-if (params.p3speed != null) {
+if (params.p3speed != null && params.p3speed != '') {
     p3speed = params.p3speed * 1;
 }
 
