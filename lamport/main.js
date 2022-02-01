@@ -1,3 +1,7 @@
+if (screen.width < 1000) {
+    window.alert('This website is not optimized for mobile devices.\nFor better experience, use laptop/pc device.');
+}
+
 var [clock1, clock2, clock3] = [0, 0, 0];
 
 const urlSearchParams = new URLSearchParams(window.location.search);
