@@ -18,12 +18,12 @@ if (params.p3speed != null && params.p3speed != '') {
 }
 
 var intervalId = setInterval(function() {
-    $('#clock1').text(clock1);
-    $('#clock2').text(clock2);
-    $('#clock3').text(clock3);
     clock1 += p1speed;
     clock2 += p2speed;
     clock3 += p3speed;
+    $('#clock1').text(clock1);
+    $('#clock2').text(clock2);
+    $('#clock3').text(clock3);
 }, 1000);
 
 function sendMessage(sender, receiver) {
@@ -39,6 +39,7 @@ function sendMessage(sender, receiver) {
 function receiveMessage(receiver, message) {
     setTimeout(function() {
         showAlert(receiver, 'receive');
+
         if (message.timestamp >= eval(`clock${receiver}`)) {
             showAlert(receiver, 'sync');
             window['clock' + receiver] = message.timestamp + 1;
